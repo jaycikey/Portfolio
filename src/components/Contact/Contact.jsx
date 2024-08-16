@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography, TextField } from "@mui/material";
-import { useTheme } from "@mui/material/styles";
+import { useTheme } from "@mui/material";
 import CustomButton from "../../shared/components/CustomButton/CustomButton";
 
 const Contact = () => {

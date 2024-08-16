@@ -1,39 +1,24 @@
-import { Box } from "@mui/material";
-import { useTheme, useMediaQuery } from "@mui/material";
-import backgroundImage from "../../shared/assets/background.svg";
+import { Box, useMediaQuery, useTheme } from "@mui/material";
+import BgImg from "../../BgImg/BgImg";
+import { useSelector } from "react-redux";
 
-const Conteiner = ({ children }) => {
+const Container = ({ children }) => {
+  const brandWidth = useSelector((state) => state.width.brandWidth);
+
   const theme = useTheme();
-
-  const isMobile = useMediaQuery(theme.breakpoints.down("xs"));
-  const isTablet = useMediaQuery(theme.breakpoints.between("xs", "sm"));
+  const isXs = useMediaQuery(theme.breakpoints.down('md'));
 
   const contentStyles = {
-    display: "flex",
-    flexDirection: "row",
     position: "relative",
-    maxWidth: "1024px",
-    margin: "0 auto",
-  };
-
-  const backgroundStyles = {
-    mt: "12px",
-    mr: isMobile ? "84px" : isTablet ? "284px" : "384px",
-    position: "absolute",
-    top: 0,
-    right: 0,
-    height: "742px",
-    width: "780px",
-    background: `url(${backgroundImage}) no-repeat right center`,
-    backgroundSize: "cover",
+    padding: `0 0 0 ${isXs ? 28 : brandWidth}px`,
   };
 
   return (
     <Box sx={contentStyles}>
-      <Box sx={backgroundStyles}></Box>
+      <BgImg />
       {children}
     </Box>
   );
 };
 
-export default Conteiner;
+export default Container;

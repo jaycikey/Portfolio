@@ -29,7 +29,6 @@ const Game = () => {
 
   const gameStyles = {
     pt: "120px",
-    pl: "50px",
   };
 
   const gameHolderStyles = {

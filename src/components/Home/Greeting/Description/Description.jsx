@@ -1,9 +1,11 @@
 import React from "react";
 import { Typography, useTheme, Link, Box } from "@mui/material";
 import Instructions from "../../../../shared/components/Instructions/Instructions";
+import useBreakpoint from "../../../../hooks/useBreakpoint";
 
 const Description = () => {
   const theme = useTheme();
+  const isXs = useBreakpoint('md')
   const githubLink = "https://github.com/jaycikey";
 
   const descriptionStyles = {
