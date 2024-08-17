@@ -1,12 +1,23 @@
-import { Link, useLocation } from "react-router-dom";
-import { useTheme, Drawer, IconButton, ListItemButton, Box, Typography, List } from "@mui/material";
+import { Link, useLocation } from 'react-router-dom';
+import {
+  useTheme,
+  Drawer,
+  IconButton,
+  ListItemButton,
+  Box,
+  Typography,
+  List,
+} from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect, useRef } from "react";
-import { updateBrandWidth } from "../../../../redux/operations/widthOperation";
-import { handleToggleMenu, handleCloseMenu } from "../../../../redux/operations/menuOperations";
-import useBreakpoint from "../../../../hooks/useBreakpoint";
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect, useRef } from 'react';
+import { updateBrandWidth } from '../../../../redux/operations/widthOperation';
+import {
+  handleToggleMenu,
+  handleCloseMenu,
+} from '../../../../redux/operations/menuOperations';
+import useBreakpoint from '../../../../hooks/useBreakpoint';
 
 const Navigation = () => {
   const location = useLocation();
@@ -14,19 +25,19 @@ const Navigation = () => {
   const dispatch = useDispatch();
   const brandRef = useRef(null);
 
-  const isMenuOpen = useSelector((state) => state.menu.isMenuOpen);
+  const isMenuOpen = useSelector(state => state.menu.isMenuOpen);
 
   const isXs = useBreakpoint('md');
 
   const links = [
-    { to: "/", label: "_hello" },
-    { to: "/about", label: "_about-me" },
-    { to: "/projects", label: "_projects" },
-    { to: "/contact", label: "_contact-me" },
+    { to: '/', label: '_hello' },
+    { to: '/about', label: '_about-me' },
+    { to: '/projects', label: '_projects' },
+    { to: '/contact', label: '_contact-me' },
   ];
 
   const navStyles = {
-    display: "flex",
+    display: 'flex',
     borderBottom: `1px solid ${theme.palette.divider.main}`,
     fontFamily: theme.typography.fontFamily,
     alignItems: 'center',
@@ -34,27 +45,31 @@ const Navigation = () => {
 
   const brandNameStyles = {
     color: theme.palette.text.secondary,
-    p: "15px",
-    mr: "32px",
+    p: '15px',
+    mr: isXs ? '80px' : '32px',
+  };
+
+  const iconSyles = {
+    color: theme.palette.text.secondary,
   };
 
   const navListStyles = {
-    display: "flex",
+    display: 'flex',
     flexGrow: 1,
     borderRight: `1px solid ${theme.palette.divider.main}`,
     p: 0,
     m: 0,
-    listStyle: "none",
+    listStyle: 'none',
   };
 
   const navItemStyles = (isActive, isLastItem) => ({
-    p: "15px 32px",
+    p: '15px 32px',
     borderLeft: `1px solid ${theme.palette.divider.main}`,
     borderRight: isLastItem
       ? `1px solid ${theme.palette.divider.main}`
-      : "none",
+      : 'none',
     color: isActive ? theme.palette.text.primary : theme.palette.text.secondary,
-    mr: isLastItem ? "auto" : 0,
+    mr: isLastItem ? 'auto' : 0,
   });
 
   useEffect(() => {
@@ -66,7 +81,8 @@ const Navigation = () => {
         const paddingRight = parseFloat(computedStyle.paddingRight);
         const borderLeft = parseFloat(computedStyle.borderLeftWidth);
         const borderRight = parseFloat(computedStyle.borderRightWidth);
-        const totalWidth = width + paddingLeft + paddingRight + borderLeft + borderRight;
+        const totalWidth =
+          width + paddingLeft + paddingRight + borderLeft + borderRight;
         dispatch(updateBrandWidth(totalWidth));
       }
     };
@@ -87,18 +103,36 @@ const Navigation = () => {
       </Typography>
       {isXs ? (
         <>
-          <IconButton edge="end" color="inherit" aria-label="menu" onClick={() => dispatch(handleToggleMenu())}>
-            <MenuIcon />
+          <IconButton
+            edge="end"
+            color="inherit"
+            aria-label="menu"
+            onClick={() => dispatch(handleToggleMenu())}
+          >
+            <MenuIcon sx={iconSyles} />
           </IconButton>
-          <Drawer anchor="right" open={isMenuOpen} onClose={() => dispatch(handleCloseMenu())}>
+          <Drawer
+            anchor="right"
+            open={isMenuOpen}
+            onClose={() => dispatch(handleCloseMenu())}
+          >
             <Box sx={{ width: 250, p: 2 }}>
-              <IconButton onClick={() => dispatch(handleCloseMenu())} sx={{ mb: 2 }}>
+              <IconButton
+                onClick={() => dispatch(handleCloseMenu())}
+                sx={{ mb: 2 }}
+              >
                 <CloseIcon />
               </IconButton>
               <List>
-                {links.map((link) => (
-                  <ListItemButton key={link.to} onClick={() => dispatch(handleCloseMenu())}>
-                    <Link to={link.to} style={{ color: "inherit", textDecoration: 'none' }}>
+                {links.map(link => (
+                  <ListItemButton
+                    key={link.to}
+                    onClick={() => dispatch(handleCloseMenu())}
+                  >
+                    <Link
+                      to={link.to}
+                      style={{ color: 'inherit', textDecoration: 'none' }}
+                    >
                       {link.label}
                     </Link>
                   </ListItemButton>
@@ -118,7 +152,7 @@ const Navigation = () => {
                 key={link.to}
                 sx={navItemStyles(isActive, isLastItem)}
               >
-                <Link to={link.to} style={{ color: "inherit" }}>
+                <Link to={link.to} style={{ color: 'inherit' }}>
                   {link.label}
                 </Link>
               </Box>

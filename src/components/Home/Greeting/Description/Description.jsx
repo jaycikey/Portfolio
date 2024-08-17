@@ -1,21 +1,24 @@
-import React from "react";
-import { Typography, useTheme, Link, Box } from "@mui/material";
-import Instructions from "../../../../shared/components/Instructions/Instructions";
-import useBreakpoint from "../../../../hooks/useBreakpoint";
+import { Typography, useTheme, Link, Box } from '@mui/material';
+import Instructions from '../../../../shared/components/Instructions/Instructions';
+import useBreakpoint from '../../../../hooks/useBreakpoint';
 
 const Description = () => {
   const theme = useTheme();
-  const isXs = useBreakpoint('md')
-  const githubLink = "https://github.com/jaycikey";
+  const isXs = useBreakpoint('md');
+  const githubLink = 'https://github.com/jaycikey';
 
   const descriptionStyles = {
-    mt: 2,
+    mt: isXs ? 24 : 2,
+  };
+
+  const textSize = {
+    fontSize: isXs ? theme.typography.caption : theme.typography.body1,
   };
 
   const linkStyles = {
-    textDecoration: "none",
-    "&:hover": {
-      textDecoration: "underline",
+    textDecoration: 'none',
+    '&:hover': {
+      textDecoration: 'underline',
     },
     color: theme.palette.accent.main,
   };
@@ -31,19 +34,24 @@ const Description = () => {
   return (
     <Box sx={descriptionStyles}>
       <Instructions>
-        {"Complete the game to continue."}
-        {"You can also see it on my GitHub page."}
+        {isXs ? (
+          <>{'find my profile on Github:'}</>
+        ) : (
+          <>
+            {'Complete the game to continue.'}
+            {'You can also see it on my GitHub page.'}
+          </>
+        )}
       </Instructions>
-      <br />
-      <Box component="span">
-        <Typography component="span" sx={pinkTextStyles}>
+      <Box component="span" sx={textSize}>
+        <Typography component="span" sx={{ ...textSize, ...pinkTextStyles }}>
           {`const `}
         </Typography>
-        <Typography component="span" sx={greenTextStyles}>
+        <Typography component="span" sx={{ ...textSize, ...greenTextStyles }}>
           {`githubLink `}
         </Typography>
         {` = `}
-        <Link href={githubLink} sx={linkStyles}>
+        <Link href={githubLink} sx={{ ...textSize, ...linkStyles }}>
           {`"${githubLink}"`}
         </Link>
       </Box>
