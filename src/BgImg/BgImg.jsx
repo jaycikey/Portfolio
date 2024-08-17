@@ -5,18 +5,19 @@ import useBreakpoint from '../hooks/useBreakpoint';
 
 const BgImg = () => {
   const brandWidth = useSelector(state => state.width.brandWidth);
-  const isXs = useBreakpoint('md');
+  const { isSm, isMd } = useBreakpoint();
+  const isSmallScreen = isSm || isMd;
 
   const backgroundStyles = {
-    ml: isXs ? 0 : `${brandWidth + 150}px`,
+    ml: isSmallScreen ? 0 : `${brandWidth}px`,
     position: 'absolute',
-    height: isXs ? '100vw' : '742px',
-    width: isXs ? '100vw' : '780px',
+    height: isSmallScreen ? '430px' : '742px',
+    width: isSmallScreen ? '430px' : '800px',
     background: `url(${backgroundImage}) no-repeat right center`,
     backgroundSize: 'cover',
   };
 
-  return <Box sx={backgroundStyles}></Box>;
+  return <Box sx={backgroundStyles} />;
 };
 
 export default BgImg;

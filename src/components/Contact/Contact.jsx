@@ -1,7 +1,6 @@
-import React from "react";
-import { Box, Typography, TextField } from "@mui/material";
-import { useTheme } from "@mui/material";
-import CustomButton from "../../shared/components/CustomButton/CustomButton";
+import { Box, Typography, TextField } from '@mui/material';
+import { useTheme } from '@mui/material';
+import CustomButton from '../../shared/components/CustomButton/CustomButton';
 
 const Contact = () => {
   const theme = useTheme();
@@ -12,12 +11,12 @@ const Contact = () => {
   };
 
   const contactFormStyles = {
-    display: "flex",
-    flexDirection: "column",
+    display: 'flex',
+    flexDirection: 'column',
   };
 
   const buttonGroupStyles = {
-    display: "flex",
+    display: 'flex',
     gap: 1,
     mt: 2,
   };

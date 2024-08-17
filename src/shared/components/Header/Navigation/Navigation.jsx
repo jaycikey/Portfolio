@@ -18,6 +18,7 @@ import {
   handleCloseMenu,
 } from '../../../../redux/operations/menuOperations';
 import useBreakpoint from '../../../../hooks/useBreakpoint';
+import Footer from '../../Footer/Footer';
 
 const Navigation = () => {
   const location = useLocation();
@@ -26,8 +27,8 @@ const Navigation = () => {
   const brandRef = useRef(null);
 
   const isMenuOpen = useSelector(state => state.menu.isMenuOpen);
-
-  const isXs = useBreakpoint('md');
+  const { isSm, isMd } = useBreakpoint();
+  const isSmallScreen = isSm || isMd;
 
   const links = [
     { to: '/', label: '_hello' },
@@ -38,6 +39,8 @@ const Navigation = () => {
 
   const navStyles = {
     display: 'flex',
+    pl: 2,
+    pr: 2,
     borderBottom: `1px solid ${theme.palette.divider.main}`,
     fontFamily: theme.typography.fontFamily,
     alignItems: 'center',
@@ -45,11 +48,10 @@ const Navigation = () => {
 
   const brandNameStyles = {
     color: theme.palette.text.secondary,
-    p: '15px',
-    mr: isXs ? '80px' : '32px',
+    mr: isSmallScreen ? 'auto' : '32px',
   };
 
-  const iconSyles = {
+  const iconStyles = {
     color: theme.palette.text.secondary,
   };
 
@@ -63,7 +65,7 @@ const Navigation = () => {
   };
 
   const navItemStyles = (isActive, isLastItem) => ({
-    p: '15px 32px',
+    p: '14px 14px',
     borderLeft: `1px solid ${theme.palette.divider.main}`,
     borderRight: isLastItem
       ? `1px solid ${theme.palette.divider.main}`
@@ -101,7 +103,7 @@ const Navigation = () => {
       <Typography ref={brandRef} component="p" sx={brandNameStyles}>
         kulzhynskyi-kostiantyn
       </Typography>
-      {isXs ? (
+      {isSmallScreen ? (
         <>
           <IconButton
             edge="end"
@@ -109,17 +111,17 @@ const Navigation = () => {
             aria-label="menu"
             onClick={() => dispatch(handleToggleMenu())}
           >
-            <MenuIcon sx={iconSyles} />
+            <MenuIcon sx={iconStyles} />
           </IconButton>
           <Drawer
             anchor="right"
             open={isMenuOpen}
             onClose={() => dispatch(handleCloseMenu())}
           >
-            <Box sx={{ width: 250, p: 2 }}>
+            <Box sx={{ width: '100vw', p: 2 }}>
               <IconButton
                 onClick={() => dispatch(handleCloseMenu())}
-                sx={{ mb: 2 }}
+                sx={{ mb: 2, ...iconStyles }}
               >
                 <CloseIcon />
               </IconButton>
@@ -139,6 +141,7 @@ const Navigation = () => {
                 ))}
               </List>
             </Box>
+            <Footer />
           </Drawer>
         </>
       ) : (

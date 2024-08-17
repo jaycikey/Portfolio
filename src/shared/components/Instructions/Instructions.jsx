@@ -6,15 +6,26 @@ const Instructions = ({ children }) => {
     display: 'flex',
     flexDirection: 'column',
     textAlign: 'left',
+    whiteSpace: 'pre-line',
   };
 
   return (
     <Box sx={instructionsStyles}>
-      {React.Children.map(children, child => (
-        <Typography variant="caption" key={child.toString()}>
-          // {child}
-        </Typography>
-      ))}
+      {React.Children.map(children, (child, index) => {
+        if (typeof child === 'string') {
+          const lines = child.split('\n');
+          return lines.map((line, lineIndex) => (
+            <Typography variant="caption" key={`${index}-${lineIndex}`}>
+              {'\u002F\u002F'} {line}
+            </Typography>
+          ));
+        }
+        return (
+          <Typography variant="caption" key={index}>
+            {child}
+          </Typography>
+        );
+      })}
     </Box>
   );
 };

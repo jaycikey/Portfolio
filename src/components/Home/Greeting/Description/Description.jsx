@@ -4,15 +4,14 @@ import useBreakpoint from '../../../../hooks/useBreakpoint';
 
 const Description = () => {
   const theme = useTheme();
-  const isXs = useBreakpoint('md');
+  const { isSm, isMd, isLg } = useBreakpoint();
   const githubLink = 'https://github.com/jaycikey';
 
-  const descriptionStyles = {
-    mt: isXs ? 24 : 2,
-  };
-
+  const isSmallScreen = isSm || isMd;
   const textSize = {
-    fontSize: isXs ? theme.typography.caption : theme.typography.body1,
+    fontSize: isSmallScreen
+      ? theme.typography.caption.fontSize
+      : theme.typography.body1.fontSize,
   };
 
   const linkStyles = {
@@ -32,25 +31,20 @@ const Description = () => {
   };
 
   return (
-    <Box sx={descriptionStyles}>
+    <Box>
       <Instructions>
-        {isXs ? (
-          <>{'find my profile on Github:'}</>
-        ) : (
-          <>
-            {'Complete the game to continue.'}
-            {'You can also see it on my GitHub page.'}
-          </>
-        )}
+        {isLg
+          ? 'Find my profile on Github:'
+          : 'Complete the game to continue.\nYou can also see it on my GitHub page.'}
       </Instructions>
       <Box component="span" sx={textSize}>
         <Typography component="span" sx={{ ...textSize, ...pinkTextStyles }}>
-          {`const `}
+          {'const '}
         </Typography>
         <Typography component="span" sx={{ ...textSize, ...greenTextStyles }}>
-          {`githubLink `}
+          {'githubLink '}
         </Typography>
-        {` = `}
+        {' = '}
         <Link href={githubLink} sx={{ ...textSize, ...linkStyles }}>
           {`"${githubLink}"`}
         </Link>

@@ -1,19 +1,19 @@
-import { Box, Typography } from "@mui/material";
-import { useTheme } from "@mui/material/styles";
-import Project from "./Project/Project";
+import { Box, Typography } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
+import Project from './Project/Project';
 
 const ProjectList = ({ projects }) => {
   const theme = useTheme();
 
   const projectsStyles = {
     backgroundColor: theme.palette.background.default,
-    p: 2, // padding: 20px
+    p: 2,
   };
 
   const projectListStyles = {
-    display: "flex",
-    flexWrap: "wrap",
-    listStyle: "none",
+    display: 'flex',
+    flexWrap: 'wrap',
+    listStyle: 'none',
     p: 0,
     m: 0,
   };
@@ -28,7 +28,7 @@ const ProjectList = ({ projects }) => {
         My Projects
       </Typography>
       <Box component="ul" sx={projectListStyles}>
-        {projects.map((project) => (
+        {projects.map(project => (
           <Box component="li" key={project.id}>
             <Project
               name={project.name}

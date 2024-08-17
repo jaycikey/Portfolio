@@ -1,21 +1,25 @@
-import { Box, useMediaQuery, useTheme } from '@mui/material';
+import { Box } from '@mui/material';
 import BgImg from '../../BgImg/BgImg';
 import { useSelector } from 'react-redux';
+import useBreakpoints from '../../hooks/useBreakpoint';
 
 const Container = ({ children }) => {
   const brandWidth = useSelector(state => state.width.brandWidth);
+  const { isSm, isMd, isLg } = useBreakpoints();
+  const isSmallScreen = isSm || isMd;
 
-  const theme = useTheme();
-  const isXs = useMediaQuery(theme.breakpoints.down('md'));
+  const paddingLeft = brandWidth;
+  const paddingRight = isSmallScreen ? paddingLeft : 0;
 
   const contentStyles = {
     position: 'relative',
-    padding: `0 0 0 ${isXs ? 28 : brandWidth}px`,
+    paddingLeft: `${paddingLeft}px`,
+    paddingRight: `${paddingRight}px`,
   };
 
   return (
     <Box sx={contentStyles}>
-      <BgImg />
+      {!isSmallScreen && !isLg && <BgImg />}
       {children}
     </Box>
   );
