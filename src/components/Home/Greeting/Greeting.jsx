@@ -18,7 +18,7 @@ const Greeting = () => {
 
   const textContainerStyles = {
     pt: getPaddingTop(),
-    maxWidth: '500px',
+    maxWidth: isSm ? '320px' : '500px',
   };
 
   return (

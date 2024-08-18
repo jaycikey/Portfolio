@@ -8,7 +8,7 @@ const Container = ({ children }) => {
   const { isSm, isMd, isLg } = useBreakpoints();
   const isSmallScreen = isSm || isMd;
 
-  const paddingLeft = brandWidth;
+  const paddingLeft = isSmallScreen ? 24 : brandWidth;
   const paddingRight = isSmallScreen ? paddingLeft : 0;
 
   const contentStyles = {
