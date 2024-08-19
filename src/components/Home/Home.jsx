@@ -3,6 +3,7 @@ import Game from './Game/Game';
 import Greeting from './Greeting/Greeting';
 import Conteiner from '../Conteiner/Conteiner';
 import useBreakpoint from '../../hooks/useBreakpoint';
+import BgImg from '../../BgImg/BgImg';
 
 const Home = () => {
   const { isSm, isMd, isLg } = useBreakpoint();
@@ -14,13 +15,17 @@ const Home = () => {
     display: isSmallOrMediumScreen ? 'block' : 'flex',
     flexDirection: isSmallOrMediumScreen ? 'column' : 'row',
     gap: isSmallOrMediumScreen ? 0 : '20px',
+    justifyContent: 'center',
   };
 
   return (
     <Conteiner>
-      <Box sx={foregroundStyles}>
-        <Greeting />
-        {!isSmallOrMediumScreen && <Game />}
+      <Box sx={{ position: 'relative', width: '100%', height: '100%' }}>
+        <BgImg />
+        <Box sx={foregroundStyles}>
+          <Greeting />
+          {!isSmallOrMediumScreen && <Game />}
+        </Box>
       </Box>
     </Conteiner>
   );

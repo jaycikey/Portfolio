@@ -11,13 +11,14 @@ const Greeting = () => {
     const windowHeight = window.innerHeight;
     if (windowHeight < 600) return '16px';
     if (isSm) return '96px';
-    if (isMd) return '40px';
+    if (isMd) return '90px';
     if (isLg) return '176px';
     return '236px';
   };
 
   const textContainerStyles = {
     pt: getPaddingTop(),
+    pl: isSm ? 0 : isMd ? '34px' : 0,
     maxWidth: isSm ? '320px' : '500px',
   };
 
