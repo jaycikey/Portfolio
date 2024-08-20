@@ -40,6 +40,10 @@ const Footer = () => {
     ...socialItemStyles,
     marginRight: isSmallScreen ? 0 : 'auto',
   };
+  const lastItemStyles = {
+    ...socialItemStyles,
+    borderRight: 0,
+  };
 
   const iconStyles = {
     fontSize: theme.typography.body2.fontSize,
@@ -57,7 +61,7 @@ const Footer = () => {
         <ListItem component="a" href="#" sx={secondLastItemStyles}>
           <FacebookIcon style={iconStyles} />
         </ListItem>
-        <ListItem component="a" href="#" sx={socialItemStyles}>
+        <ListItem component="a" href="#" sx={lastItemStyles}>
           {!isSmallScreen && <Typography variant="body2">@jaycikey</Typography>}
           <GitHubIcon style={iconStyles} />
         </ListItem>

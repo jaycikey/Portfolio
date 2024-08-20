@@ -57,7 +57,6 @@ const Navigation = () => {
   const navListStyles = {
     display: 'flex',
     flexGrow: 1,
-    borderRight: `1px solid ${theme.palette.divider.main}`,
     alignItems: 'center',
   };
 
