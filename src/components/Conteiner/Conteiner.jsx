@@ -1,9 +1,7 @@
 import { Box, useTheme } from '@mui/material';
-import useRealViewportHeight from '../../hooks/useRealViewportHeight';
 
 const Container = ({ children }) => {
   const theme = useTheme();
-  useRealViewportHeight();
 
   const mainContentStyles = {
     width: '100%',
