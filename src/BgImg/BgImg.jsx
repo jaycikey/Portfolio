@@ -2,14 +2,14 @@ import { Box } from '@mui/material';
 import useBreakpoints from '../hooks/useBreakpoint';
 
 const BgImg = () => {
-  const { isSm, isMd, isLg, isXl } = useBreakpoints();
+  const { isSm, isMd, isLg } = useBreakpoints();
 
   const backgroundStyles = {
     position: 'fixed',
-    top: isSm ? '-40px' : isMd ? '-80px' : 0,
-    left: isSm ? '-200px' : isMd ? '-150px' : 0,
-    width: '800px',
-    height: '800px',
+    top: isSm ? '-128px' : isMd ? '-85px' : isLg ? '8px' : '-10px',
+    left: isSm ? '-32px' : isMd ? '-90px' : isLg ? '-58px' : '220px',
+    width: '100%',
+    height: '100%',
     zIndex: 0,
     pointerEvents: 'none',
     overflow: 'hidden',

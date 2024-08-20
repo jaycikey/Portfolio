@@ -39,8 +39,6 @@ const Navigation = () => {
 
   const navStyles = {
     display: 'flex',
-    pl: 2,
-    pr: 2,
     borderBottom: `1px solid ${theme.palette.divider.main}`,
     fontFamily: theme.typography.fontFamily,
     alignItems: 'center',
@@ -48,7 +46,8 @@ const Navigation = () => {
 
   const brandNameStyles = {
     color: theme.palette.text.secondary,
-    mr: isSmallScreen ? 'auto' : '32px',
+    mr: isSmallScreen ? 'auto' : '18px',
+    p: '0 14px',
   };
 
   const iconStyles = {
@@ -59,9 +58,7 @@ const Navigation = () => {
     display: 'flex',
     flexGrow: 1,
     borderRight: `1px solid ${theme.palette.divider.main}`,
-    p: 0,
-    m: 0,
-    listStyle: 'none',
+    alignItems: 'center',
   };
 
   const navItemStyles = (isActive, isLastItem) => ({
@@ -106,7 +103,6 @@ const Navigation = () => {
       {isSmallScreen ? (
         <>
           <IconButton
-            edge="end"
             color="inherit"
             aria-label="menu"
             onClick={() => dispatch(handleToggleMenu())}

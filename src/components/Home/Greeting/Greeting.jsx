@@ -18,8 +18,8 @@ const Greeting = () => {
 
   const textContainerStyles = {
     pt: getPaddingTop(),
-    pl: isSm ? 0 : isMd ? '34px' : 0,
-    maxWidth: isSm ? '320px' : '500px',
+    maxWidth: isSm ? '320px' : '550px',
+    m: isSm ? '0 auto' : isMd ? '0 auto' : isLg ? '0 auto' : 0,
   };
 
   return (

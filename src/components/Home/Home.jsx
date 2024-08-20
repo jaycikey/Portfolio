@@ -1,7 +1,6 @@
 import { Box } from '@mui/material';
 import Game from './Game/Game';
 import Greeting from './Greeting/Greeting';
-import Conteiner from '../Conteiner/Conteiner';
 import useBreakpoint from '../../hooks/useBreakpoint';
 import BgImg from '../../BgImg/BgImg';
 
@@ -19,15 +18,13 @@ const Home = () => {
   };
 
   return (
-    <Conteiner>
-      <Box sx={{ position: 'relative', width: '100%', height: '100%' }}>
-        <BgImg />
-        <Box sx={foregroundStyles}>
-          <Greeting />
-          {!isSmallOrMediumScreen && <Game />}
-        </Box>
+    <Box sx={{ position: 'relative', width: '100%', height: '100%' }}>
+      <BgImg />
+      <Box sx={foregroundStyles}>
+        <Greeting />
+        {!isSmallOrMediumScreen && <Game />}
       </Box>
-    </Conteiner>
+    </Box>
   );
 };
 

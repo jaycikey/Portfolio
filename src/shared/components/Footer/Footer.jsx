@@ -16,9 +16,11 @@ const Footer = () => {
     alignItems: 'center',
     mt: 'auto',
     width: '100%',
-    padding: '0 16px',
     borderTop: `1px solid ${theme.palette.divider.main}`,
     color: theme.palette.text.secondary,
+  };
+  const findMeIn = {
+    p: '0 14px',
   };
 
   const socialListStyles = {
@@ -46,7 +48,7 @@ const Footer = () => {
 
   return (
     <Box component="footer" sx={footerStyles}>
-      <Typography variant="body2" sx={{ paddingRight: 2 }}>
+      <Typography variant="body2" sx={findMeIn}>
         find me in:
       </Typography>
       <List sx={socialListStyles}>

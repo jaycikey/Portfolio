@@ -1,6 +1,6 @@
-import Header from "../shared/components/Header/Header";
-import About from "../components/About/About";
-import Footer from "../shared/components/Footer/Footer";
+import Header from '../shared/components/Header/Header';
+import About from '../components/About/About';
+import Footer from '../shared/components/Footer/Footer';
 
 const AboutPage = () => {
   return (

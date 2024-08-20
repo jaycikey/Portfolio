@@ -3,6 +3,7 @@ import Footer from '../shared/components/Footer/Footer';
 import { Box } from '@mui/material';
 import Home from '../components/Home/Home';
 import useBreakpoint from '../hooks/useBreakpoint';
+import Container from '../components/Conteiner/Conteiner';
 
 const HomePage = () => {
   const { isSm, isMd } = useBreakpoint();
@@ -15,11 +16,13 @@ const HomePage = () => {
   };
 
   return (
-    <Box sx={homeStyles}>
-      <Header />
-      <Home />
-      {!isSmallScreen && <Footer />}
-    </Box>
+    <Container>
+      <Box sx={homeStyles}>
+        <Header />
+        <Home />
+        {!isSmallScreen && <Footer />}
+      </Box>
+    </Container>
   );
 };
 
