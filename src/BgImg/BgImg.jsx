@@ -9,7 +9,7 @@ const BgImg = () => {
     top: isSm ? '-128px' : isMd ? '-85px' : isLg ? '8px' : '-10px',
     left: isSm ? '-32px' : isMd ? '-90px' : isLg ? '-58px' : '220px',
     width: '100%',
-    height: '100%',
+    height: '800px',
     zIndex: 0,
     pointerEvents: 'none',
     overflow: 'hidden',
