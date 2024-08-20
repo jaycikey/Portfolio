@@ -23,6 +23,7 @@ const Container = ({ children }) => {
   const contentStyles = {
     border: `1px solid ${theme.palette.divider.main}`,
     borderRadius: '16px',
+    height: 'calc(var(--vh, 1vh) * 100)',
     boxSizing: 'border-box',
   };
 
