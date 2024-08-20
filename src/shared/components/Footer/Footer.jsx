@@ -15,7 +15,6 @@ const Footer = () => {
     textAlign: 'center',
     alignItems: 'center',
     mt: 'auto',
-    width: '100%',
     borderTop: `1px solid ${theme.palette.divider.main}`,
     color: theme.palette.text.secondary,
   };

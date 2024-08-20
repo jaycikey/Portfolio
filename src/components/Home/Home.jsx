@@ -9,8 +9,6 @@ const Home = () => {
   const isSmallOrMediumScreen = isSm || isMd || isLg;
 
   const foregroundStyles = {
-    position: 'relative',
-    zIndex: 1,
     display: isSmallOrMediumScreen ? 'block' : 'flex',
     flexDirection: isSmallOrMediumScreen ? 'column' : 'row',
     gap: isSmallOrMediumScreen ? 0 : '20px',
@@ -18,7 +16,7 @@ const Home = () => {
   };
 
   return (
-    <Box sx={{ position: 'relative', width: '100%', height: '100%' }}>
+    <Box>
       <BgImg />
       <Box sx={foregroundStyles}>
         <Greeting />
