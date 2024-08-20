@@ -12,7 +12,6 @@ const HomePage = () => {
   const homeStyles = {
     display: 'flex',
     flexDirection: 'column',
-    minHeight: 'calc(100vh - 20px)',
   };
 
   return (
