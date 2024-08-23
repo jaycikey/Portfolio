@@ -1,7 +1,11 @@
 /**
+ * The icons on the most left side are the following:
+ *
  * professional-info: experience, skills, certificates
  * personal-info (shown in the design): bio, interest, etc.
  * hobbies: music, books, hiking, games, etc.
+ *
+ * You can add anything else you need.
  */
 
 import { Box } from '@mui/material';
