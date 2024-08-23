@@ -1,4 +1,4 @@
-import { moveSnake, eatFood, gameOver, win } from "../slices/gameSlice";
+import { startGame, moveSnake, eatFood, gameOver, win } from "../slices/gameSlice";
 
 const gridSizeX = 11;
 const gridSizeY = 20;
