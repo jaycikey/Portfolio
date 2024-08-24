@@ -27,7 +27,7 @@ const ProjectList = ({ projects }) => {
   };
 
   const projectsStyles = {
-    width: '100%',
+    width: '80%',
   };
 
   const projectListStyles = {
