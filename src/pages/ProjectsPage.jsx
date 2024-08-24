@@ -1,5 +1,5 @@
-import ProjectList from '../components/ProjectList/ProjectList';
 import Layout from '../shared/components/Layout/Layout';
+import ProjectList from '../components/ProjectList/ProjectList';
 
 const ProjectsPage = ({ projects }) => {
   return (

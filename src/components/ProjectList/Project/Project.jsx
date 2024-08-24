@@ -1,9 +1,9 @@
-import { Box, Typography } from "@mui/material";
-import { useTheme } from "@mui/material/styles";
+import { Box, Typography } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 
 const Project = ({
   name,
-  imgUrl = "https://dummyimage.com/640x480/2a2a2a/ffffff&text=Product+image+placeholder",
+  imgUrl = 'https://dummyimage.com/640x480/2a2a2a/ffffff&text=Product+image+placeholder',
   description,
 }) => {
   const theme = useTheme();
@@ -12,23 +12,23 @@ const Project = ({
     backgroundColor: theme.palette.background.paper,
     color: theme.palette.text.primary,
     borderColor: theme.palette.divider,
-    border: "1px solid",
+    border: '1px solid',
     p: 1.25,
     m: 1.25,
     width: 200,
   };
 
   const projectImageStyles = {
-    width: "100%",
-    height: "auto",
+    width: '100%',
+    height: 'auto',
   };
 
   const projectNameStyles = {
-    fontSize: "1.25rem",
+    fontSize: '1.25rem',
   };
 
   const projectDescriptionStyles = {
-    fontSize: "1rem",
+    fontSize: '1rem',
   };
 
   return (

@@ -1,14 +1,74 @@
 [
   {
     "id": "id-1",
-    "name": "Tacos With Lime",
-    "imgUrl": "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?dpr=2&h=480&w=640",
-    "description": "10.99"
+    "name": "Project #1",
+    "technologies": [
+      "React",
+      "HTML",
+      "CSS"
+    ],
+    "link": "#",
+    "Gitlink": "#",
+    "description": "description"
   },
   {
     "id": "id-2",
-    "name": "Fries and Burger",
-    "imgUrl": "https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?dpr=2&h=480&w=640",
-    "description": "14.29"
+    "name": "Project #2",
+    "technologies": [
+      "Vue",
+      "HTML",
+      "CSS"
+    ],
+    "link": "#",
+    "Gitlink": "#",
+    "description": "description"
+  },
+  {
+    "id": "id-3",
+    "name": "Project #3",
+    "technologies": [
+      "Vue",
+      "HTML",
+      "CSS"
+    ],
+    "link": "#",
+    "Gitlink": "#",
+    "description": "description"
+  },
+  {
+    "id": "id-4",
+    "name": "Project #4",
+    "technologies": [
+      "Vue",
+      "HTML",
+      "CSS"
+    ],
+    "link": "#",
+    "Gitlink": "#",
+    "description": "description"
+  },
+  {
+    "id": "id-5",
+    "name": "Project #5",
+    "technologies": [
+      "Vue",
+      "HTML",
+      "CSS"
+    ],
+    "link": "#",
+    "Gitlink": "#",
+    "description": "description"
+  },
+  {
+    "id": "id-6",
+    "name": "Project #6",
+    "technologies": [
+      "Vue",
+      "HTML",
+      "CSS"
+    ],
+    "link": "#",
+    "Gitlink": "#",
+    "description": "description"
   }
 ]
