@@ -1,20 +1,24 @@
 import { Box } from '@mui/material';
-import Code from './Code/Code';
-import AboutList from './AboutList/AboutList';
+import { Outlet } from 'react-router-dom';
 import SideBar from './SideBar/SideBar';
-import ContentView from './ContentView/ContentView';
 
 const About = () => {
   const aboutStyles = {
     display: 'flex',
+    flex: 1,
+  };
+
+  const contentStyles = {
+    flex: 1,
+    padding: '1rem',
   };
 
   return (
     <Box sx={aboutStyles}>
       <SideBar />
-      <AboutList />
-      <ContentView />
-      <Code />
+      <Box sx={contentStyles}>
+        <Outlet />
+      </Box>
     </Box>
   );
 };
