@@ -19,7 +19,7 @@ const Project = ({
   };
 
   const projectImageStyles = {
-    width: '100%',
+    width: '80%',
     height: 'auto',
   };
 
