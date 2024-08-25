@@ -1,45 +1,81 @@
 import { Box, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
+import CustomButton from '../../../shared/components/CustomButton/CustomButton';
+import CustomSvgIcon from '../CustomSvgIcon/CustomSvgIcon';
 
 const Project = ({
+  counter,
   name,
-  imgUrl = 'https://dummyimage.com/640x480/2a2a2a/ffffff&text=Product+image+placeholder',
+  imgUrl = 'https://dummyimage.com/328x145/2a2a2a/ffffff&text=Product+image+placeholder+328x145',
   description,
+  icon,
 }) => {
+  const iconMap = {
+    HTML: 'icon-html',
+    CSS: 'icon-css',
+    React: 'icon-react',
+    Vue: 'icon-vue',
+    Angular: 'icon-angular',
+    Gatsby: 'icon-gatsby',
+    Flutter: 'icon-flutter',
+  };
+
   const theme = useTheme();
 
   const projectStyles = {
-    backgroundColor: theme.palette.background.paper,
-    color: theme.palette.text.primary,
-    borderColor: theme.palette.divider,
-    border: '1px solid',
-    p: 1.25,
-    m: 1.25,
-    width: 200,
+    width: '328px',
+    position: 'relative',
   };
-
-  const projectImageStyles = {
-    width: '100%',
-    height: 'auto',
+  const iconStyles = {
+    position: 'absolute',
+    top: theme.spacing(4),
+    right: theme.spacing(2),
+    fill: theme.palette.primary.dark,
+    backgroundColor: theme.palette.accent.green,
+    borderRadius: '2px',
+    width: '20px',
+    height: '20px',
   };
-
-  const projectNameStyles = {
-    fontSize: '1.25rem',
+  const nameStyle = {
+    color: theme.palette.text.secondary,
   };
-
-  const projectDescriptionStyles = {
-    fontSize: '1rem',
+  const counterStyle = {
+    color: theme.palette.text.royalBlue,
   };
+  const imgStyles = {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    overflow: 'hidden',
+    maxHeight: '145px',
+    border: `1px solid ${theme.palette.divider.main}`,
+    borderRadius: '15px 15px 0px 0px',
+  };
+  const descBlockStyles = {
+    p: 3,
+    border: `1px solid ${theme.palette.divider.main}`,
+    borderRadius: '0px 0px 15px 15px',
+  };
+  const descStyle = { mb: 2 };
 
   return (
     <Box sx={projectStyles}>
-      <Typography variant="h4" sx={projectNameStyles}>
-        {name}
+      <CustomSvgIcon iconId={iconMap[icon]} sx={iconStyles} />
+      <Typography variant="body2" sx={nameStyle}>
+        <Box component="span" variant="body2" sx={counterStyle}>
+          {counter}
+        </Box>
+        {` // _${name}`}
       </Typography>
-      <img src={imgUrl} alt={name} style={projectImageStyles} />
-      <Typography variant="body1" sx={projectDescriptionStyles}>
-        {description}
-      </Typography>
+      <Box sx={imgStyles}>
+        <img src={imgUrl} alt={name} />
+      </Box>
+      <Box sx={descBlockStyles}>
+        <Typography variant="body2" sx={descStyle}>
+          {description}
+        </Typography>
+        <CustomButton variant="default">view-project</CustomButton>
+      </Box>
     </Box>
   );
 };

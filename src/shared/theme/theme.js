@@ -28,6 +28,7 @@ const theme = createTheme({
       primary: "#FFFFFF",
       secondary: "#607B96",
       grey: "#E5E9F0",
+      royalBlue: "#5565E8",
     },
     divider: {
       main: "#1E2D3D",

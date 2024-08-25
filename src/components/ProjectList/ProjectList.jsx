@@ -3,6 +3,8 @@ import { useSearchParams } from 'react-router-dom';
 import Project from './Project/Project';
 import Sidebar from './Sidebar/Sidebar';
 import FilterBar from './FilterBar/FilterBar';
+import PerfectScrollbar from 'react-perfect-scrollbar';
+import 'react-perfect-scrollbar/dist/css/styles.css';
 
 const ProjectList = ({ projects }) => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -32,9 +34,13 @@ const ProjectList = ({ projects }) => {
 
   const projectListStyles = {
     display: 'flex',
-    maxWidth: '960px',
     flexWrap: 'wrap',
-    p: '116px 128px',
+    p: '40px',
+    gap: '16px 40px',
+  };
+
+  const scrollableAreaStyles = {
+    maxHeight: `calc(var(--vh, 1vh) * 100 - 146px)`,
   };
   const containerStyles = { display: 'flex', height: '100%' };
 
@@ -47,17 +53,21 @@ const ProjectList = ({ projects }) => {
       />
       <Box sx={projectsStyles}>
         <FilterBar />
-        <Box component="ul" sx={projectListStyles}>
-          {filteredProjects.map(project => (
-            <Box component="li" key={project.id}>
-              <Project
-                name={project.name}
-                imgUrl={project.imgUrl}
-                description={project.description}
-              />
-            </Box>
-          ))}
-        </Box>
+        <PerfectScrollbar style={scrollableAreaStyles}>
+          <Box component="ul" sx={projectListStyles}>
+            {filteredProjects.map((project, index) => (
+              <Box component="li" key={project.id}>
+                <Project
+                  counter={`Project ${index + 1}`}
+                  name={project.name}
+                  imgUrl={project.imgUrl}
+                  description={project.description}
+                  icon={project.technologies[0]}
+                />
+              </Box>
+            ))}
+          </Box>
+        </PerfectScrollbar>
       </Box>
     </Box>
   );
