@@ -1,6 +1,6 @@
-import Button from "@mui/material/Button";
-import { ThemeProvider } from "@mui/material/styles";
-import theme from "../../theme/theme";
+import Button from '@mui/material/Button';
+import { ThemeProvider } from '@mui/material/styles';
+import theme from '../../theme/theme';
 
 const CustomButton = ({ variant, children, ...props }) => {
   return (

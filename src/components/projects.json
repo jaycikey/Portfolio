@@ -1,262 +1,76 @@
 [
   {
     "id": "id-1",
-    "name": "name-project",
+    "name": "psychologist_app",
     "technologies": [
       "React",
       "CSS",
       "HTML"
     ],
-    "imgUrl": "6775355aae42326ce21aee81340220ed.jpeg",
-    "link": "#",
-    "Gitlink": "#",
-    "description": "Duis aute irure dolor in velit esse cillum dolore."
+    "imgUrl": "irynaprudko-com-ua-1024x768desktop-dfcd3f.jpg",
+    "link": "https://www.irynaprudko.com.ua/",
+    "Gitlink": "https://github.com/z9877969/psychologist",
+    "description": "Designed to facilite the interaction between psychologist and clients"
   },
   {
     "id": "id-2",
-    "name": "name-project",
+    "name": "aqua_track",
     "technologies": [
-      "Vue",
-      "CSS",
-      "HTML"
+      "Node"
     ],
-    "imgUrl": "ec552d0fc0fed9c2538a39799caaf957.jpeg",
-    "link": "#",
-    "Gitlink": "#",
-    "description": "Duis aute irure dolor in velit esse cillum dolore."
+    "imgUrl": "water-intake-control-frontend-vercel-app-1024x768desktop-ce2074.jpg",
+    "link": "https://water-intake-control-backend.onrender.com/api-docs",
+    "Gitlink": "https://github.com/SvitlanaHu/water-intake-control-backend",
+    "description": "Complitehensive backend solution for tracking and managing daily water."
   },
   {
     "id": "id-3",
-    "name": "name-project",
+    "name": "contact_book",
     "technologies": [
-      "Angular",
+      "React",
       "CSS",
       "HTML"
     ],
-    "imgUrl": "aef60f6cc31b779d0aed8e1e0297dc40.jpeg",
-    "link": "#",
-    "Gitlink": "#",
-    "description": "Duis aute irure dolor in velit esse cillum dolore."
+    "imgUrl": "jaycikey-react-08-vercel-app-1024x768desktop-af3b50.jpg",
+    "link": "https://jaycikey-react-08.vercel.app/",
+    "Gitlink": "https://github.com/jaycikey/goit-react-hw-08",
+    "description": "Simple contact book built with React and Material UI for managing contacts"
   },
   {
     "id": "id-4",
-    "name": "name-project",
+    "name": "food_boutique",
     "technologies": [
-      "Gatsby",
+      "JavaScript",
       "CSS",
       "HTML"
     ],
-    "imgUrl": "6775355aae42326ce21aee81340220ed.jpeg",
-    "link": "#",
-    "Gitlink": "#",
-    "description": "Duis aute irure dolor in velit esse cillum dolore."
+    "imgUrl": "svitlanahu-github-io-1024x768desktop-5b6a0a.jpg",
+    "link": "https://svitlanahu.github.io/js-product/",
+    "Gitlink": "https://github.com/SvitlanaHu/js-product",
+    "description": "website for cmpains that sell grocery products built with JS"
   },
   {
     "id": "id-5",
-    "name": "name-project",
+    "name": "focuse_frame",
     "technologies": [
-      "Flutter",
-      "CSS",
-      "HTML"
+      "HTML",
+      "CSS"
     ],
-    "imgUrl": "ec552d0fc0fed9c2538a39799caaf957.jpeg",
-    "link": "#",
-    "Gitlink": "#",
-    "description": "Duis aute irure dolor in velit esse cillum dolore."
+    "imgUrl": "hloba-ukraine-github-io-1024x768desktop-c081b0.jpg",
+    "link": "https://hloba-ukraine.github.io/FocusTeam10/",
+    "Gitlink": "https://github.com/hloba-ukraine/FocusTeam10",
+    "description": "Website for a school of photographers. Responsive design."
   },
   {
     "id": "id-6",
-    "name": "name-project",
+    "name": "web_studio",
     "technologies": [
-      "React",
-      "Gatsby",
+      "HTML",
       "CSS"
     ],
-    "imgUrl": "aef60f6cc31b779d0aed8e1e0297dc40.jpeg",
-    "link": "#",
-    "Gitlink": "#",
-    "description": "Duis aute irure dolor in velit esse cillum dolore."
-  },
-  {
-    "id": "id-7",
-    "name": "name-project",
-    "technologies": [
-      "Vue",
-      "Flutter",
-      "CSS"
-    ],
-    "imgUrl": "6775355aae42326ce21aee81340220ed.jpeg",
-    "link": "#",
-    "Gitlink": "#",
-    "description": "Duis aute irure dolor in velit esse cillum dolore."
-  },
-  {
-    "id": "id-8",
-    "name": "name-project",
-    "technologies": [
-      "Angular",
-      "Gatsby",
-      "CSS"
-    ],
-    "imgUrl": "ec552d0fc0fed9c2538a39799caaf957.jpeg",
-    "link": "#",
-    "Gitlink": "#",
-    "description": "Duis aute irure dolor in velit esse cillum dolore."
-  },
-  {
-    "id": "id-9",
-    "name": "name-project",
-    "technologies": [
-      "React",
-      "Flutter",
-      "CSS"
-    ],
-    "imgUrl": "aef60f6cc31b779d0aed8e1e0297dc40.jpeg",
-    "link": "#",
-    "Gitlink": "#",
-    "description": "Duis aute irure dolor in velit esse cillum dolore."
-  },
-  {
-    "id": "id-10",
-    "name": "name-project",
-    "technologies": [
-      "Vue",
-      "Gatsby",
-      "CSS"
-    ],
-    "imgUrl": "6775355aae42326ce21aee81340220ed.jpeg",
-    "link": "#",
-    "Gitlink": "#",
-    "description": "Duis aute irure dolor in velit esse cillum dolore."
-  },
-  {
-    "id": "id-11",
-    "name": "name-project",
-    "technologies": [
-      "Angular",
-      "React",
-      "CSS"
-    ],
-    "imgUrl": "ec552d0fc0fed9c2538a39799caaf957.jpeg",
-    "link": "#",
-    "Gitlink": "#",
-    "description": "Duis aute irure dolor in velit esse cillum dolore."
-  },
-  {
-    "id": "id-12",
-    "name": "name-project",
-    "technologies": [
-      "Flutter",
-      "Gatsby",
-      "CSS"
-    ],
-    "imgUrl": "aef60f6cc31b779d0aed8e1e0297dc40.jpeg",
-    "link": "#",
-    "Gitlink": "#",
-    "description": "Duis aute irure dolor in velit esse cillum dolore."
-  },
-  {
-    "id": "id-13",
-    "name": "name-project",
-    "technologies": [
-      "React",
-      "CSS",
-      "HTML"
-    ],
-    "imgUrl": "6775355aae42326ce21aee81340220ed.jpeg",
-    "link": "#",
-    "Gitlink": "#",
-    "description": "Duis aute irure dolor in velit esse cillum dolore."
-  },
-  {
-    "id": "id-14",
-    "name": "name-project",
-    "technologies": [
-      "Vue",
-      "CSS",
-      "HTML"
-    ],
-    "imgUrl": "ec552d0fc0fed9c2538a39799caaf957.jpeg",
-    "link": "#",
-    "Gitlink": "#",
-    "description": "Duis aute irure dolor in velit esse cillum dolore."
-  },
-  {
-    "id": "id-15",
-    "name": "name-project",
-    "technologies": [
-      "Angular",
-      "CSS",
-      "HTML"
-    ],
-    "imgUrl": "aef60f6cc31b779d0aed8e1e0297dc40.jpeg",
-    "link": "#",
-    "Gitlink": "#",
-    "description": "Duis aute irure dolor in velit esse cillum dolore."
-  },
-  {
-    "id": "id-16",
-    "name": "name-project",
-    "technologies": [
-      "Gatsby",
-      "CSS",
-      "HTML"
-    ],
-    "imgUrl": "6775355aae42326ce21aee81340220ed.jpeg",
-    "link": "#",
-    "Gitlink": "#",
-    "description": "Duis aute irure dolor in velit esse cillum dolore."
-  },
-  {
-    "id": "id-17",
-    "name": "name-project",
-    "technologies": [
-      "Flutter",
-      "CSS",
-      "HTML"
-    ],
-    "imgUrl": "ec552d0fc0fed9c2538a39799caaf957.jpeg",
-    "link": "#",
-    "Gitlink": "#",
-    "description": "Duis aute irure dolor in velit esse cillum dolore."
-  },
-  {
-    "id": "id-18",
-    "name": "name-project",
-    "technologies": [
-      "React",
-      "Gatsby",
-      "CSS"
-    ],
-    "imgUrl": "aef60f6cc31b779d0aed8e1e0297dc40.jpeg",
-    "link": "#",
-    "Gitlink": "#",
-    "description": "Duis aute irure dolor in velit esse cillum dolore."
-  },
-  {
-    "id": "id-19",
-    "name": "name-project",
-    "technologies": [
-      "Vue",
-      "Flutter",
-      "CSS"
-    ],
-    "imgUrl": "6775355aae42326ce21aee81340220ed.jpeg",
-    "link": "#",
-    "Gitlink": "#",
-    "description": "Duis aute irure dolor in velit esse cillum dolore."
-  },
-  {
-    "id": "id-20",
-    "name": "name-project",
-    "technologies": [
-      "Angular",
-      "Gatsby",
-      "CSS"
-    ],
-    "imgUrl": "ec552d0fc0fed9c2538a39799caaf957.jpeg",
-    "link": "#",
-    "Gitlink": "#",
-    "description": "Duis aute irure dolor in velit esse cillum dolore."
+    "imgUrl": "jaycikey-github-io-1024x768desktop-43b517.jpg",
+    "link": "https://jaycikey.github.io/goit-markup-hw-06/",
+    "Gitlink": "https://github.com/jaycikey/goit-markup-hw-06",
+    "description": "Website of WebStudio company. Responsive design, transform effects."
   }
 ]

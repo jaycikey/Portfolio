@@ -63,6 +63,7 @@ const ProjectList = ({ projects }) => {
                   imgUrl={project.imgUrl}
                   description={project.description}
                   icon={project.technologies[0]}
+                  link={project.link}
                 />
               </Box>
             ))}

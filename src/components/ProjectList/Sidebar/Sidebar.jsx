@@ -50,6 +50,8 @@ const Sidebar = ({ technologies }) => {
     Angular: 'icon-angular',
     Gatsby: 'icon-gatsby',
     Flutter: 'icon-flutter',
+    Node: 'icon-node',
+    JavaScript: 'icon-JavaScript',
   };
 
   const iconStyles = { mr: 1, fill: theme.palette.secondary.main };

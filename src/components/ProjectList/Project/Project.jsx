@@ -9,6 +9,7 @@ const Project = ({
   imgUrl = 'https://dummyimage.com/328x145/2a2a2a/ffffff&text=Product+image+placeholder+328x145',
   description,
   icon,
+  link,
 }) => {
   const iconMap = {
     HTML: 'icon-html',
@@ -18,6 +19,8 @@ const Project = ({
     Angular: 'icon-angular',
     Gatsby: 'icon-gatsby',
     Flutter: 'icon-flutter',
+    Node: 'icon-node',
+    JavaScript: 'icon-JavaScript',
   };
 
   const theme = useTheme();
@@ -55,6 +58,7 @@ const Project = ({
     p: 3,
     border: `1px solid ${theme.palette.divider.main}`,
     borderRadius: '0px 0px 15px 15px',
+    minHeight: '172px',
   };
   const descStyle = { mb: 2 };
 
@@ -74,7 +78,9 @@ const Project = ({
         <Typography variant="body2" sx={descStyle}>
           {description}
         </Typography>
-        <CustomButton variant="default">view-project</CustomButton>
+        <CustomButton variant="default" href={link} target="_blank">
+          view-project
+        </CustomButton>
       </Box>
     </Box>
   );
