@@ -7,6 +7,7 @@ import store from '../redux/store';
 import projects from './projects.json';
 import useRealViewportHeight from '../hooks/useRealViewportHeight';
 import NotFoundPage from '../shared/components/NotFoundPage/NotFoundPage';
+import Layout from '../shared/components/Layout/Layout';
 
 const HomePage = lazy(() => import('../pages/HomePage'));
 const AboutPage = lazy(() => import('../pages/AboutPage'));
@@ -30,7 +31,7 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Router>
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<Layout loading={true} />}>
             <Box>
               <Routes>
                 <Route path="/" element={<HomePage />} />
