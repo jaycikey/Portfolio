@@ -24,6 +24,16 @@ const PersonalInfo = lazy(() =>
 );
 const Hobbies = lazy(() => import('../components/Hobbies/Hobbies'));
 
+interface Project {
+	id: string,
+	name: string,
+	technologirs: string[],
+	imgUrl: string,
+	link: string,
+	Gitlink: string,
+	description: string,
+}
+
 const App = () => {
   useRealViewportHeight();
   return (
@@ -47,7 +57,7 @@ const App = () => {
 
                 <Route
                   path="/projects"
-                  element={<ProjectsPage projects={projects} />}
+                  element={<ProjectsPage projects={projects as Project[]} />}
                 />
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="*" element={<NotFoundPage />} />
