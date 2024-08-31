@@ -2,6 +2,7 @@ import { Box, Typography } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import CustomButton from '../../../shared/components/CustomButton/CustomButton';
 import CustomSvgIcon from '../CustomSvgIcon/CustomSvgIcon';
+import useBreakpoints from '../../../hooks/useBreakpoint';
 
 const Project = ({
   counter,
@@ -22,11 +23,12 @@ const Project = ({
     Node: 'icon-node',
     JavaScript: 'icon-JavaScript',
   };
+  const { isSm } = useBreakpoints();
 
   const theme = useTheme();
 
   const projectStyles = {
-    width: '328px',
+    width: isSm ? '100%' : '328px',
     position: 'relative',
   };
   const iconStyles = {

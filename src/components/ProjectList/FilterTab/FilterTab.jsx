@@ -1,8 +1,11 @@
 import { Typography, useTheme, Box, IconButton } from '@mui/material';
 import { useSearchParams } from 'react-router-dom';
 import CloseIcon from '@mui/icons-material/Close';
+import useBreakpoints from '../../../hooks/useBreakpoint';
 
 const FilterTab = () => {
+  const { isSm } = useBreakpoints();
+
   const theme = useTheme();
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -14,7 +17,7 @@ const FilterTab = () => {
     alignItems: 'center',
     color: theme.palette.secondary.main,
     p: '12px 12px',
-    borderRight: `1px solid ${theme.palette.divider.main}`,
+    borderRight: isSm ? 'none' : `1px solid ${theme.palette.divider.main}`,
   };
   const filterNameStyles = { flexGrow: 1 };
   const closeIconStyles = { color: theme.palette.secondary.main, p: 0, ml: 1 };

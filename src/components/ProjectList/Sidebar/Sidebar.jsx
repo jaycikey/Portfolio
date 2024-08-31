@@ -9,8 +9,11 @@ import { useSelector } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
 import { useTheme } from '@mui/material/styles';
 import CustomSvgIcon from '../CustomSvgIcon/CustomSvgIcon';
+import useBreakpoints from '../../../hooks/useBreakpoint';
 
 const Sidebar = ({ technologies }) => {
+  const { isSm } = useBreakpoints();
+
   const brandWidth = useSelector(state => state.width.brandWidth);
   const theme = useTheme();
   const [searchParams, setSearchParams] = useSearchParams();
@@ -18,8 +21,8 @@ const Sidebar = ({ technologies }) => {
     searchParams.get('technologies')?.split(',') || [];
 
   const sideBar = {
-    width: `${brandWidth - 9}px`,
-    borderRight: `1px solid ${theme.palette.divider.main}`,
+    width: isSm ? '100%' : `${brandWidth - 9}px`,
+    borderRight: isSm ? 'none' : `1px solid ${theme.palette.divider.main}`,
   };
   const filterNameSyles = {
     p: '12px 40px',
